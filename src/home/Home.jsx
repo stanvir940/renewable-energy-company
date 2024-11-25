@@ -12,6 +12,9 @@ import {
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import Quote from "./Quote";
+import AwardsSection from "./AwardsSection";
+import VideoSection from "../video/VideoSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,8 +61,8 @@ const Home = () => {
         />
       </div>
 
-      <div className="w-full text-gray-700 text-center">
-        <p>
+      <div className="w-full text-gray-400 text-center flex">
+        <p className=" items-center justify-center md:px-36">
           A first mover in the latest clean-tech developments in Bangladesh, a
           high social impact market with more EVs on its streets than Tesla has
           sold globally to date and the world’s largest distributed renewable
@@ -109,35 +112,52 @@ const Home = () => {
 
       {/* icon for gsap */}
       <div className="flex justify-center items-center text-center w-full my-10 space-x-10">
-        <div ref={sectionRef} className="flex flex-col">
-          <div className="text-7xl w-full text-green-500">
-            <FaFacebook />
-          </div>
-          <h1 ref={numberRef}>0</h1>
-        </div>
         <div className="flex flex-col">
-          <div className="text-7xl w-full text-green-500">
-            <FaFacebook />
+          <div className="text-xs w-20 text-green-500">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/013/089/790/small_2x/home-icon-round-button-png.png"
+              alt=""
+            />
           </div>
           <h1>Home</h1>
         </div>
         <div className="flex flex-col">
-          <div className="text-7xl w-full text-green-500">
-            <FaFacebook />
+          <div className="text-xs w-20 text-green-500">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/019/879/187/non_2x/car-monochrome-icon-on-transparent-background-free-png.png"
+              alt=""
+            />
           </div>
-          <h1>Home</h1>
+          <h1>Car</h1>
         </div>
         <div className="flex flex-col">
-          <div className="text-7xl w-full text-green-500">
-            <FaFacebook />
+          <div className="text-xl w-20 text-green-500">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/033/882/148/non_2x/transparent-background-person-icon-free-png.png"
+              alt=""
+            />
           </div>
-          <h1>Home</h1>
+          <h1>People</h1>
         </div>
         <div className="flex flex-col">
-          <div className="text-7xl w-full text-green-500">
-            <FaFacebook />
+          <div className="text-xs w-20 text-green-500">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/008/506/967/non_2x/isometric-3d-icon-city-buildings-for-infographic-concept-set-which-includes-house-offices-homes-shop-stores-supermarkets-and-industrial-elements-png.png"
+              alt=""
+            />
           </div>
-          <h1>Home</h1>
+          <h1>Industry</h1>
+        </div>
+        <div className="flex flex-col">
+          <div className="text-xs w-20 text-green-500 text-center">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/016/017/118/non_2x/transparent-cloud-icon-free-png.png"
+              alt=""
+            />
+          </div>
+          <div className="text-center">
+            <h1>Environment Friendly</h1>
+          </div>
         </div>
       </div>
 
@@ -189,6 +209,95 @@ const Home = () => {
             </button>
           </div>
         </section>
+      </div>
+
+      <div>
+        <Quote></Quote>
+      </div>
+
+      <div className="w-full text-green-700 font-bold">
+        <div className="w-full text-center my-24">
+          <h1 className="text-5xl">WHAT OTHER SAY ABOUT US</h1>
+        </div>
+        <div className="carousel w-full bg-slate-200 p-6">
+          {/* Carousel Items with Comments */}
+          <div
+            id="item1"
+            className="carousel-item w-full flex flex-col items-center text-center"
+          >
+            <p className="text-lg font-semibold text-blue-600 mb-2">
+              Dr. Jane Smith
+            </p>
+            <blockquote className="text-gray-800 font-thin italic max-w-3xl">
+              "Renewable energy is the cornerstone of a sustainable future.
+              Harnessing the power of the sun, wind, and water will reduce
+              carbon emissions and combat climate change."
+            </blockquote>
+          </div>
+          <div
+            id="item2"
+            className="carousel-item w-full flex flex-col items-center text-center"
+          >
+            <p className="text-lg font-semibold text-blue-600 mb-2">
+              Prof. Robert Johnson
+            </p>
+            <blockquote className="text-gray-800 font-thin italic max-w-3xl">
+              "Investing in renewable energy is not only an environmental choice
+              but also an economic one. It creates jobs and strengthens energy
+              independence for nations worldwide."
+            </blockquote>
+          </div>
+          <div
+            id="item3"
+            className="carousel-item w-full flex flex-col items-center text-center"
+          >
+            <p className="text-lg font-semibold text-blue-600 mb-2">
+              Engineer Lisa Kumar
+            </p>
+            <blockquote className="text-gray-800 font-thin italic max-w-3xl">
+              "The advancements in renewable technologies, such as solar panels
+              and wind turbines, are making clean energy more accessible and
+              affordable than ever before."
+            </blockquote>
+          </div>
+          <div
+            id="item4"
+            className="carousel-item w-full flex flex-col items-center text-center"
+          >
+            <p className="text-lg font-semibold text-blue-600 mb-2">
+              Environmentalist Ali Khan
+            </p>
+            <blockquote className="text-gray-800 font-thin max-w-3xl">
+              "Every step we take toward renewable energy is a step toward
+              preserving our planet for future generations. It's not just an
+              option; it's a responsibility."
+            </blockquote>
+          </div>
+        </div>
+
+        {/* Navigation Buttons */}
+        <div className="flex w-full justify-center gap-2 py-2">
+          <a href="#item1" className="btn btn-xs btn-slate-200">
+            1
+          </a>
+          <a href="#item2" className="btn btn-xs btn-slate-200">
+            2
+          </a>
+          <a href="#item3" className="btn btn-xs btn-slate-200">
+            3
+          </a>
+          <a href="#item4" className="btn btn-xs btn-slate-200">
+            4
+          </a>
+        </div>
+      </div>
+
+      <div className="w-full my-24">
+        <AwardsSection></AwardsSection>
+      </div>
+
+      <div className="w-full my-24">
+        <VideoSection></VideoSection>
       </div>
     </div>
   );
