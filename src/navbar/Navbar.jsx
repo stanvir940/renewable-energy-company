@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <div>
@@ -22,24 +24,30 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li className="hover:text-green-500 font-normal">
-                <a>Item 1</a>
+                <Link to={"/"}>Home</Link>
               </li>
               <li>
-                <a>Parent</a>
-                <ul className="p-2 bg-white">
-                  <li className="hover:text-green-500 font-normal">
-                    <a>Submenu 1</a>
-                  </li>
-                  <li className="hover:text-green-500 font-normal">
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
+                <Link to={"/about"}>About</Link>
+              </li>
+
+              <li>
+                <a>Business Line</a>
               </li>
               <li className="hover:text-green-500 font-normal">
-                <a>Item 3</a>
+                <a>Impact</a>
+              </li>
+              <li className="hover:text-green-500 font-normal">
+                <a>Publication</a>
+              </li>
+              <li className="hover:text-green-500 font-normal">
+                <a>News</a>
+              </li>
+
+              <li className="hover:text-green-500 font-normal">
+                <a>Career</a>
               </li>
             </ul>
           </div>
@@ -48,11 +56,14 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li className="hover:text-green-500 font-normal">
-              <a>Item 1</a>
+              <Link to={"/"}>Home</Link>
+            </li>
+            <li>
+              <Link to={"/about"}>About Us</Link>
             </li>
             <li>
               <details>
-                <summary>Parent</summary>
+                <summary>Business Line</summary>
                 <ul className="p-2 bg-white">
                   <li className="hover:text-green-500 font-normal">
                     <a>Submenu 1</a>
@@ -64,12 +75,21 @@ const Navbar = () => {
               </details>
             </li>
             <li className="hover:text-green-500 font-normal">
-              <a>Item 3</a>
+              <a>Impact</a>
+            </li>
+            <li className="hover:text-green-500 font-normal">
+              <a>Publication</a>
+            </li>
+            <li className="hover:text-green-500 font-normal">
+              <a>News</a>
+            </li>
+            <li className="hover:text-green-500 font-normal">
+              <a>Career</a>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn bg-white text-gray-700">Login</a>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import AOS from "aos";
 
 const VideoSection = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1500 });
   }, []);
 
   return (
